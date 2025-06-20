@@ -24,12 +24,12 @@ if Gender == "M" or "F":
                 elif Total_Amount > 300000 and Total_Amount <= 500000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 30%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.30)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.30)) #wih discount
                 elif Total_Amount > 500000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 35%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.35)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.35)) #wih discount
                 else:
                     print("You are not eligible for discount")
@@ -37,7 +37,7 @@ if Gender == "M" or "F":
                 if Total_Amount > 200000 and Total_Amount <= 300000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 10%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.10)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.10)) #wih discount
                 elif Total_Amount > 300000 and Total_Amount <= 500000:
                     print("Total Amount = ", Total_Amount)
@@ -47,7 +47,7 @@ if Gender == "M" or "F":
                 elif Total_Amount > 500000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 25%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.25)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.25)) #wih discount
                 else:
                     print("You are not eligible for discount")
@@ -60,18 +60,18 @@ if Gender == "M" or "F":
             if Age > 65:
                 if Total_Amount > 200000 and Total_Amount <= 300000:
                     print("Total Amount = ", Total_Amount)
-                    print("Discount = 15%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount = 25%")
+                    print("Discount amount = ", Total_Amount * 0.25)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.25)) #wih discount
                 elif Total_Amount > 300000 and Total_Amount <= 500000:
                     print("Total Amount = ", Total_Amount)
-                    print("Discount = 25%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount = 35%")
+                    print("Discount amount = ", Total_Amount * 0.35)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.35)) #wih discount
                 elif Total_Amount > 500000:
                     print("Total Amount = ", Total_Amount)
-                    print("Discount = 30%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount = 40%")
+                    print("Discount amount = ", Total_Amount * 0.40)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.40)) #wih discount
                 else:
                     print("You are not eligible for discount")
@@ -79,17 +79,17 @@ if Gender == "M" or "F":
                 if Total_Amount > 200000 and Total_Amount <= 300000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 15%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.15)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.15)) #wih discount
                 elif Total_Amount > 300000 and Total_Amount <= 500000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 25%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.25)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.25)) #wih discount
                 elif Total_Amount > 500000:
                     print("Total Amount = ", Total_Amount)
                     print("Discount = 30%")
-                    print("Discount amount = ", Total_Amount * 0.20)
+                    print("Discount amount = ", Total_Amount * 0.30)
                     print("Total net amount = ",Total_Amount-(Total_Amount * 0.30)) #wih discount
                 else:
                     print("You are not eligible for discount")
