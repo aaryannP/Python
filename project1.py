@@ -12,7 +12,7 @@ Making_Charges_Per_Gram = 845
 
 Total_Making_Charges = Gram * Making_Charges_Per_Gram
 Total_Amount = Total_Gold_Rate + Total_Making_Charges
-if Gender == "M" or "F":
+if Gender == "M" or Gender == "F":
     if Gender == "M": 
         if Age>0:  
             if Age > 65:
