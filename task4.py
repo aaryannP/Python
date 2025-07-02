@@ -9,10 +9,6 @@ while len(numbers) < 12:
 player1 = numbers[:6]
 player2 = numbers[6:]
 
-print("Player 1:", player1)
-print("Player 2:", player2)
-
-
 while len(player1) > 0 and len(player2) > 0:
     guess = random.choice(numbers)
     print("Guess:", guess)
