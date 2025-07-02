@@ -6,8 +6,19 @@ while len(numbers) < 12:
     if num not in numbers:
         numbers.append(num)
 
+print("\nNumber :")
+for i in range(len(numbers)):
+    print(numbers[i],end=' ')
 player1 = numbers[:6]
 player2 = numbers[6:]
+
+print("\nPlayer 1's number:")
+for i in range(len(player1)):
+    print(player1[i], end=' ')
+
+print("\nPlayer 2's number:")
+for i in range(len(player2)):
+    print(player2[i], end=' ')
 
 while len(player1) > 0 and len(player2) > 0:
     guess = random.choice(numbers)
