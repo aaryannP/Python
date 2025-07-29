@@ -1,0 +1,15 @@
+2025-07-29 16:11:00,191 - INFO - Added fruit: Apple, Price: 10.0, Qty: 40
+2025-07-29 16:11:30,734 - INFO - Added fruit: Banana, Price: 10.0, Qty: 30
+2025-07-29 16:12:04,928 - INFO - Customer viewed fruits.
+2025-07-29 16:22:39,669 - INFO - Added fruit: Mango, Price: 10.0, Qty: 50
+2025-07-29 16:22:53,541 - INFO - Customer viewed fruits.
+2025-07-29 16:23:20,020 - INFO - Purchased 3 x Apple for \u20b930.0
+2025-07-29 16:27:51,285 - INFO - Updated fruit: Apple, New Price: 40.0, Qty: 25
+2025-07-29 16:28:16,209 - INFO - Updated fruit: Banana, New Price: 35.0, Qty: 20
+2025-07-29 16:29:00,024 - INFO - Updated fruit: Mango, New Price: 100.0, Qty: 30
+2025-07-29 16:29:20,418 - INFO - Customer viewed fruits.
+2025-07-29 16:29:57,028 - INFO - Purchased 3 x Apple for \u20b9120.0
+2025-07-29 16:33:11,711 - INFO - Customer viewed fruits.
+2025-07-29 16:40:36,172 - INFO - Customer viewed fruits.
+2025-07-29 16:40:54,604 - INFO - Purchased 3KG x Banana for \u20b9105.0
+2025-07-29 19:54:40,529 - INFO - Added fruit: Payaya, Price: 20.0, Qty: 20
