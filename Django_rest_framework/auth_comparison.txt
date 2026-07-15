@@ -1,0 +1,20 @@
+Interview Question: What is the difference between TokenAuthentication and SessionAuthentication in Django REST Framework?
+
+Answer:
+
+In Django REST Framework, both TokenAuthentication and SessionAuthentication are used to verify the identity of a user, but they operate very differently in terms of state, storage, and typical use cases.
+
+1. SessionAuthentication:
+- How it works: It relies on Django's built-in session framework. When a user logs in, a session ID is generated and stored in a secure, HttpOnly cookie on the client's browser. The server stores the actual session data (like the user ID) in its database or cache. With every subsequent request, the browser automatically sends the session cookie, and the server looks it up to authenticate the user.
+- State: It is Stateful. The server must maintain a record of the session.
+- CSRF Protection: Because it uses cookies that the browser sends automatically, it requires CSRF (Cross-Site Request Forgery) protection to ensure that malicious sites cannot forge requests on behalf of the user.
+- Best Use Case: Web applications (like traditional Django websites or SPAs running on the same domain) where the client is a browser that naturally handles cookies and CSRF tokens.
+
+2. TokenAuthentication:
+- How it works: It is a simple token-based system. When a user authenticates (e.g., via a login endpoint), the server generates a unique string (a Token) and sends it back to the client. The client must store this token (usually in LocalStorage or AsyncStorage) and manually attach it to the `Authorization` header of every subsequent HTTP request (e.g., `Authorization: Token 9944b09199c62bcf9418ad846dd0e4bbdfc6ee4b`).
+- State: It is Stateless (mostly). While the token is stored in the server's database (in the `authtoken_token` table), the server simply does a quick lookup. It doesn't rely on browser sessions.
+- CSRF Protection: It does NOT require CSRF protection. Since the client has to explicitly attach the token to the header via code, a malicious site cannot easily forge a request because it cannot read the token from the other domain's LocalStorage.
+- Best Use Case: Mobile applications (iOS/Android), desktop clients, or third-party API integrations where there is no browser environment to automatically manage cookies.
+
+Summary:
+Use SessionAuthentication for standard web browsers and SPAs sharing the same backend domain, where cookie security and CSRF tokens are handled natively. Use TokenAuthentication for mobile apps, external clients, and decoupled frontend/backend architectures where explicit header-based authentication is required.
