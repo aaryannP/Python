@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Profile Picture</title>
+</head>
+<body>
+    <h2>Upload Profile Picture</h2>
+    <!-- CRITICAL: enctype="multipart/form-data" is required for file uploads -->
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <a href="{% url 'profile_list' %}">View All Profiles</a>
+</body>
+</html>

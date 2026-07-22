@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verify OTP</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .message { padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        .success { background: #eafbea; border: 1px solid green; color: green; }
+        .error { background: #fbeaea; border: 1px solid red; color: red; }
+    </style>
+</head>
+<body>
+    <h2>Verify OTP</h2>
+    
+    {% if message %}
+        <div class="message {% if 'Success' in message %}success{% else %}error{% endif %}">
+            {{ message }}
+        </div>
+    {% endif %}
+
+    <p>Please enter the 6-digit OTP sent to your email.</p>
+    
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Verify</button>
+    </form>
+    
+    <br>
+    <a href="{% url 'forgot_password' %}">Resend OTP</a>
+</body>
+</html>

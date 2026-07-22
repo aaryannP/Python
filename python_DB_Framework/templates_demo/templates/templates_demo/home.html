@@ -1,0 +1,13 @@
+{% extends 'templates_demo/base.html' %}
+
+{% block title %}Home - My App{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Welcome to Templates Demo</h1>
+        <p class="col-md-8 fs-4">This is the home page. Explore our collection of playlists and restaurants.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'explore' %}" role="button">Start Exploring</a>
+    </div>
+</div>
+{% endblock %}

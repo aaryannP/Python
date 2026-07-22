@@ -1,0 +1,14 @@
+{% extends 'crud_app/base.html' %}
+
+{% block content %}
+    <h2>{% if object %}Edit Product{% else %}Add New Product{% endif %}</h2>
+    
+    <div style="background: #fafafa; padding: 20px; border: 1px solid #ddd; border-radius: 5px; max-width: 500px;">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn">Save Product</button>
+            <a href="{% url 'product_list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

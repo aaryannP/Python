@@ -1,0 +1,10 @@
+{% extends 'authentication/base.html' %}
+{% block content %}
+    {% if user.is_authenticated %}
+        <h2>Welcome to the Home Page, {{ user.username }}!</h2>
+        <p>You have successfully logged in.</p>
+    {% else %}
+        <h2>Welcome to the App!</h2>
+        <p>Please login or signup to continue.</p>
+    {% endif %}
+{% endblock %}

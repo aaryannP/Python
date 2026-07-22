@@ -1,0 +1,15 @@
+{% extends 'crud_app/base.html' %}
+
+{% block content %}
+    <h2>Confirm Deletion</h2>
+    
+    <div style="background: #fbeaea; padding: 20px; border: 1px solid red; border-radius: 5px; max-width: 500px;">
+        <p>Are you sure you want to delete the product "<strong>{{ object.name }}</strong>"?</p>
+        
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Yes, Delete</button>
+            <a href="{% url 'product_detail' object.pk %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

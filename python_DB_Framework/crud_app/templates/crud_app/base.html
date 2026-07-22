@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD App</title>
+    <style>
+        body { font-family: sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .nav { margin-bottom: 20px; }
+        .nav a { text-decoration: none; color: white; background: #007bff; padding: 10px 15px; border-radius: 5px; margin-right: 10px; }
+        .nav a:hover { background: #0056b3; }
+        .btn { text-decoration: none; padding: 8px 12px; background: #28a745; color: white; border-radius: 4px; border: none; cursor: pointer; }
+        .btn-danger { background: #dc3545; }
+        .btn-secondary { background: #6c757d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="{% url 'product_list' %}">Product List</a>
+            <a href="{% url 'product_create' %}">Add New Product</a>
+        </div>
+        
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

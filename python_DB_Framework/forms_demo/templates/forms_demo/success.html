@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Success</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .success-box { border: 1px solid green; padding: 20px; border-radius: 5px; background: #eafbea; }
+    </style>
+</head>
+<body>
+    <h2>Submission Successful!</h2>
+    
+    {% if data %}
+    <div class="success-box">
+        <p><strong>Restaurant Name:</strong> {{ data.name }}</p>
+        <p><strong>Cuisine Type:</strong> {{ data.cuisine }}</p>
+        <p><strong>Contact Email:</strong> {{ data.email }}</p>
+    </div>
+    {% else %}
+    <p>No data received.</p>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'add_restaurant' %}">Add another restaurant</a>
+</body>
+</html>

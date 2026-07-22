@@ -1,0 +1,23 @@
+{% extends 'crud_app/base.html' %}
+
+{% block content %}
+    <h2>Product Catalog</h2>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+        {% for product in products %}
+            <div style="border: 1px solid #ddd; padding: 15px; border-radius: 5px; background: #fafafa;">
+                <h3><a href="{% url 'product_detail' product.pk %}" style="text-decoration: none; color: #333;">{{ product.name }}</a></h3>
+                <p style="color: #666; font-size: 14px;">{{ product.description|truncatewords:10 }}</p>
+                <p style="font-weight: bold; color: #e91e63;">${{ product.price }}</p>
+                
+                <div style="margin-top: 15px;">
+                    <a href="{% url 'product_detail' product.pk %}" class="btn btn-secondary" style="font-size: 12px;">View Details</a>
+                    <a href="{% url 'product_update' product.pk %}" class="btn" style="font-size: 12px; background: #ffc107; color: black;">Edit</a>
+                    <a href="{% url 'product_delete' product.pk %}" class="btn btn-danger" style="font-size: 12px;">Delete</a>
+                </div>
+            </div>
+        {% empty %}
+            <p>No products available right now.</p>
+        {% endfor %}
+    </div>
+{% endblock %}

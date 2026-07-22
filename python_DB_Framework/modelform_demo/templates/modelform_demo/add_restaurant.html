@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ModelForm Add Restaurant</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .errorlist { color: red; list-style-type: none; padding: 0; margin: 0 0 5px 0; }
+        .form-group { margin-bottom: 20px; }
+        .success-box { border: 1px solid green; padding: 15px; background: #eafbea; margin-bottom: 20px; }
+        .form-control { width: 100%; max-width: 300px; padding: 8px; }
+    </style>
+</head>
+<body>
+    <h2>Add New Restaurant (ModelForm)</h2>
+
+    {% if success %}
+    <div class="success-box">
+        <strong>Success!</strong> The restaurant was saved to the database.
+    </div>
+    {% endif %}
+
+    {% if form.errors %}
+        <div style="color: red; border: 1px solid red; padding: 10px; margin-bottom: 20px; max-width: 300px;">
+            Please correct the errors below.
+        </div>
+    {% endif %}
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <div class="form-group">
+            {{ form.name.label_tag }}<br>
+            {{ form.name.errors }}
+            {{ form.name }}
+        </div>
+        
+        <div class="form-group">
+            {{ form.cuisine.label_tag }}<br>
+            {{ form.cuisine.errors }}
+            {{ form.cuisine }}
+        </div>
+        
+        <div class="form-group">
+            {{ form.rating.label_tag }}<br>
+            {{ form.rating.errors }}
+            {{ form.rating }}
+        </div>
+        
+        <button type="submit">Save Restaurant</button>
+    </form>
+</body>
+</html>

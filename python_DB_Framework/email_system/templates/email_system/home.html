@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email System Home</title>
+</head>
+<body>
+    <h2>Email Testing Dashboard</h2>
+    <ul>
+        <li><a href="{% url 'trigger_password_reset' %}">Test Password Reset Email</a></li>
+        <li><a href="{% url 'send_order_confirmation' %}">Test Order Confirmation HTML Email</a></li>
+        <li><a href="{% url 'send_ipl_welcome' %}">Test IPL Fantasy Welcome HTML Email</a></li>
+    </ul>
+    <p><em>Note: Emails will be printed to the console (terminal) as the console backend is configured in settings.py to prevent SMTP authentication errors.</em></p>
+</body>
+</html>
